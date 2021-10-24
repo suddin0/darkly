@@ -56,7 +56,7 @@ So what we need to do to get the flag is search all the `README` files, but doin
 
 What we can do is try to download the directories using `wget` and then make our computer search for them.
 
-#### Download using `curl`
+##### Download using `wget`
 
 ```bash
 wget -r -nH -q –level=0 -E –ignore-length -x -k -p -erobots=off -np -R index.html 'http://192.168.1.23/.hidden/'
@@ -284,6 +284,6 @@ A normal server generelly serves everything unles it is told not to serve. The a
 99dde1d35d1fdd283924d84e6d9f1d820
 ```
 
-## Resources
+# Resources
 - [StackOverflow : Download directories using `wget`](https://stackoverflow.com/a/26269730/4440716)
 - [WGet and Downloading an entire remote directory](https://www.linux.com/training-tutorials/wget-and-downloading-entire-remote-directory/)
