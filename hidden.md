@@ -274,6 +274,8 @@ main();
 
 ```
 
+# How to avoid the problem
+A normal server generelly serves everything unles it is told not to serve. The are special files that exists restrict access to special files and directory and that is called [`.htaccess`](https://en.wikipedia.org/wiki/.htaccess) all though in modern servers we do not necesserily use this files bit in servers like `Apachy` and many other we do and their role is to protect access to special places and we should use them pro prodect better our directories.
 
 
 # Flag
