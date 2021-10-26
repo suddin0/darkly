@@ -62,18 +62,20 @@ What we can do is try to download the directories using `wget` and then make our
 wget -r -nH -q –level=0 -E –ignore-length -x -k -p -erobots=off -np -R index.html 'http://192.168.1.23/.hidden/'
 ```
 
-- **`-r`** : Recursively
-- **`-nH`** : not saving files to hostname folder 
-- **`-q`** : 
-- **`-level`** : Specify recursion maximum depth level (0 for no limit), very important
-- **`-E`** : append “.html” extension to every document declared as “application/html“. Useful when you deal with dirs (that are not dirs but index.html files)
-- **`-ignore-length`** : Ignore “Content-length” http headers, sometimes useful when dealing with bugged CGI programs
-- **`-x`** : Force dirs, create an hierarchy of directories even if one would not been created otherwise
-- **`-k`** : here’s one of the most useful options, it converts remote links to local for best viewing
-- **`-p`** : download ll the files that are necessary for proper display of the page
-- **`-erobots`** : turn off http robots.txt usage
-- **`-np`** : not going to upper directories, like ccc/…
-- **`-R`** : excluding index.html files 
+|Option|Description|
+|--|--|
+|`-r` | Recursively |
+|`-nH` | not saving files to hostname folder  |
+|`-q` | Quiet / Silent|
+|`-level` | Specify recursion maximum depth level (0 for no limit), very important |
+|`-E` | append “.html” extension to every document declared as “application/html“. Useful when you deal with dirs (that are not dirs but index.html files) |
+|`-ignore-length` | Ignore “Content-length” http headers, sometimes useful when dealing with bugged CGI programs |
+|`-x` | Force dirs, create an hierarchy of directories even if one would not been created otherwise |
+|`-k` | here’s one of the most useful options, it converts remote links to local for best viewing |
+|`-p` | download all the files that are necessary for proper display of the page |
+|`-erobots` | turn off http robots.txt usage |
+|`-np` | not going to upper directories, like ccc/… |
+|`-R` | excluding index.html files  |
 
 This command downloads the directory `.hidden` on our computer under the folder `.hidden` and in that directory we can find the `README` files and all the other directories.
 Once we have downloaded all we need to do is just find all the `README` files and then **read** them to get the flag!
