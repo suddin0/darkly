@@ -15,7 +15,7 @@ When we ask it to serve `../` (parent directory) it once again shows an alert sa
 
 Let's try some more parent directory and try to get the `passwd` file.
 
-?> I am trying to get the `passwd` file because generally in `CTF` challenges we try to get this kind of files. In real life we would rather try to get other importent informations.
+?> We are trying to get the `passwd` file because generally in `CTF` challenges we try to get this kind of files. In real life we would rather try to get other importent informations.
 
 |Directory| Alert message|
 |--|--|

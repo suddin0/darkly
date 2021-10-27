@@ -12,9 +12,11 @@
 * [Directory Browsing](directory_browsing.md)
 * [Feedback XSS](feedback.md)
 * [NSA Image XSS](nsa_image_xss.md)
-<!-- ___
-* [XSS](cookies.md)
-* [SQL](cookies.md)
-* [Redirection](cookies.md)
-* [Brutforce](cookies.md)
-* [Robot.txt](cookies.md) -->
+* [Brutforce](brutforce.md)
+* [Member SQLi 1](member.md)
+<!-- ___ -->
+<!-- * [SQL Injection](sql_injection.md) -->
+<!-- * [XSS](cookies.md) -->
+<!-- * [Redirection](cookies.md) -->
+<!-- * [Brutforce](cookies.md) -->
+<!-- * [Robot.txt](cookies.md) -->

