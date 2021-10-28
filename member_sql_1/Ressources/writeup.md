@@ -3,6 +3,7 @@
 - Tags : `sql injection` , `md5` , `sha256`
 - Server ip : `192.168.1.17`
 - Difficulty : <span style="color : red">Difficult</span>
+
 ____
 
 # <span style="text-decoration: underline">problem</span>
@@ -34,7 +35,7 @@ First name: Flag
 Surname : GetThe
 ```
 
-?> The minimum number we can use is **1** and the maximum number of value we can try is **5**
+> The minimum number we can use is **1** and the maximum number of value we can try is **5**
 
 It seems like the value we put in the `input` is ised as the `id` for the search (naturally...). The id is meant to be a `number`. it becomes more clear when we try a different text then a `number`, such as the letter `a`, we get the following result.
 
@@ -49,7 +50,6 @@ You have an error in your SQL syntax; check the manual that corresponds to your 
 ```
 
 Here we get a `sql` error message. It seems like that our character is causing an `sql` **syntax error**
-
 
 # <span style="text-decoration: underline">Solution</span>
 
@@ -73,7 +73,7 @@ and this should translate to the following query
 SELECT * FROM <table> WHERE id=1 OR 1=1
 ```
 
-What happening here is that `1=1` is always **true** and this is making `sql` give us all the list of **members**. Let's try some more `sql` queries and find out some more information from the database.
+Whats happening here is that `1=1` is always **true** and this is making `sql` give us all the list of **members**. Let's try some more `sql` queries and find out some more information from the database.
 
 |goal|query|Error message|
 |--|--|--|
@@ -191,9 +191,9 @@ And this also gives us a long list of `table` name and their `columns`. Here are
 |4| **list_images** | `id`, `url`, `title`, `comment` |
 |5| **vote_dbs** | `id_vote`, `nb_vote`, `subject`|
 
-?> If you are wondaring how do we know that **this** are the `tables` that interests us, then know that all the other tables ware in all uppercase with generic names that we can always find in **default** configurations. Ofcores this does not mean an importent database can not have those kind of charactaristics.
+> If you are wondaring how do we know that **this** are the `tables` that interests us, then know that all the other tables ware in all uppercase with generic names that we can always find in **default** configurations. Ofcores this does not mean an importent database can not have those kind of charactaristics.
 
-?> Remember that to acess tables from different database instead of using *only* the name of the table we have to precise teh database and then the name of the table in the following way `database.table_name`. So if we want to access to the table `list_images` from the database `Member_images` we have to use the following syntax `Member_images.list_images`
+> Remember that to acess tables from different database instead of using *only* the name of the table we have to precise teh database and then the name of the table in the following way `database.table_name`. So if we want to access to the table `list_images` from the database `Member_images` we have to use the following syntax `Member_images.list_images`
 
 ## Get all the informations from the table
 
@@ -233,29 +233,30 @@ It says
 - When we re hash it using sha245 we get the following checksum `10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5`
 
 > On a mac or linux you can get the sha256 checksum of the word `fortytwo` using the terminal with the following code
+>
 > ```bash
 > echo -n "fortytwo" | sha256sum
 > ```
+>
 > Or you can get it using online tools such as [this](https://md5decrypt.net/Sha256/) (or many others)
 
-?> We can easily "decrypt" (unhash) the value using online tools such as [md5online.org](https://www.md5online.org/md5-decrypt.html) or many others
-
+> We can easily "decrypt" (unhash) the value using online tools such as [md5online.org](https://www.md5online.org/md5-decrypt.html) or many others
 
 There you go, we have found the flag.
 
-!> We can use information from this challanage to do the other challenges
+> We can use information from this challanage to do the other challenges
 
-# How to avoid the problem
+# <span style="text-decoration: underline">How to avoid the problem</sapan>
 
 Sql injection could be a dengerouis problem which could as fas as compromise the whole system. in our situation the programmer used the raw **user input** data inside the query which in turn let the user control what the quert string becomes and so the result is given. This kind of situation can be avoided easily by not using the user input directly in our string.
 
-# Flag
+# <span style="text-decoration: underline">Flag</sapan>
 
 ```text
 10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
 ```
 
-# Resources
+# <span style="text-decoration: underline">Resources</sapan>
 
 - [How to Concatenate String and NULL Values in SQL Server](https://learnsql.com/cookbook/how-to-concatenate-string-and-null-values-in-sql-server/)
 - [SQL CONCATENATE (appending strings to one another)](https://www.sqlbook.com/sql-string-functions/sql-concatenate/)

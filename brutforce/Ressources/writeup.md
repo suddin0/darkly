@@ -3,12 +3,13 @@
 - Tags : `brutforce` , `curl`, `guess`
 - Server ip : `192.168.1.17 `
 - Difficulty : <span style="color : orange">Medium</span>
+  
 ___
-
 
 # <span style="text-decoration: underline">problem</span>
 
 Once common way of breaking into website is uisng brutforce. When we go to **signin** page and enter
+
 |username|password|
 |--|--|
 |AAA|BBB|
@@ -25,8 +26,6 @@ In the `URL` we can see the following parameters
 |Login|Login|
 
 We can clearly see in the `URL` what we used as our `username` and `password`. This is clearly an old way of doing things because it expose the user credentials in plain text and on the `URL`
-
-
 
 # <span style="text-decoration: underline">Solution</span>
 
@@ -60,7 +59,7 @@ We could also narrow down the **password** list like our **username** list (all 
 
 I have noticed that [this](git) repository contains a short list (1k) passwords that we can find in the [wikipedia](https://en.wikipedia.org/wiki/Wikipedia:10,000_most_common_passwords) page and this could be a good start.
 
-All we have to do now is 
+All we have to do now is
 
 - Download the list of password
 - Write some code to do the query using all the passwords
@@ -68,8 +67,7 @@ All we have to do now is
 
 Here is a simple `shell` script to do the brutforce
 
-?> We will use `admin` as username first because it is one of the most used username for admin account.
-
+> We will use `admin` as username first because it is one of the most used username for admin account.
 
 ```bash
 #!/bin/bash
@@ -115,7 +113,7 @@ do
 done
 ```
 
-!> If you try the script, do not forget to put the **right** `host` / `ip` address for `you`!
+> If you try the script, do not forget to put the **right** `host` / `ip` address for `you`!
 
 After executing our script, the script tells us that the password is `shadow`. so :
 
@@ -123,7 +121,8 @@ After executing our script, the script tells us that the password is `shadow`. s
 |--|--|
 |admin|shadow|
 
-# How to avoid the problem
+# <span style="text-decoration: underline">How to avoid the problem</sapan>
+
 This was once a common problem before where website exposed the user credentials directoly on the `URL` which itself is not encrypted. In moderndays we start
 
 - Not sending credentials or importent information over [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) method and start using [`POST`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST).
@@ -133,7 +132,7 @@ This was once a common problem before where website exposed the user credentials
 - A server could also guess if the user begind the screen is the right user depending on the user IP, location, behaviour and many other things to protect better the user account.
 
 
-# Flag
+# <span style="text-decoration: underline">Flag</sapan>
 
 ```text
 b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2

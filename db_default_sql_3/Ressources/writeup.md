@@ -3,12 +3,12 @@
 - Tags : `SQL Injection`
 - Server ip : `192.168.1.23 `
 - Difficulty : <span style="color : green">Easy</span>
-___
 
+___
 
 # <span style="text-decoration: underline">problem</span>
 
-From the [member](/member.md) challenge we have found that there is a table called `db_default` of the database `Member_Brute_Force` that contains the following columns
+From the [member](/member) challenge we have found that there is a table called `db_default` of the database `Member_Brute_Force` that contains the following columns
 
 - id
 - username
@@ -20,7 +20,7 @@ Let's try to see if we can findout anything interesting in that database!
 
 ## Extract more contents from the table `db_default`
 
-During the [member](/member.md) challenge we have found out what `table` contains what `column` name
+During the [member](/member) challenge we have found out what `table` contains what `column` name
 
 |No|Table|Column names|
 |--|--|--|
@@ -30,11 +30,9 @@ During the [member](/member.md) challenge we have found out what `table` contain
 |4| **list_images** | `id`, `url`, `title`, `comment` |
 |5| **vote_dbs** | `id_vote`, `nb_vote`, `subject`|
 
-
 Let's try to get the contents of this table
 
-!> Remember that if we try to access a table that is not present in the default database but in some other database then we have to use the following syntax `database.table`
-
+> Remember that if we try to access a table that is not present in the default database but in some other database then we have to use the following syntax `database.table`
 
 ```sql
 1 AND 1=2 UNION SELECT username, CONCAT(CHAR(124), id, CHAR(124), username, CHAR(124), password, CHAR(124)) AS name FROM Member_Brute_Force.db_default --
@@ -60,12 +58,12 @@ We get the flag `b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b
 
 > This is the same flag as for the `brutforce` challenge where we logged is as the user **admin** using the password `shadow`
 
-# How to avoid the problem
+# <span style="text-decoration: underline">How to avoid the problem</span>
 
 Sql injection could be a dengerouis problem which could as fas as compromise the whole system. in our situation the programmer used the raw **user input** data inside the query which in turn let the user control what the quert string becomes and so the result is given. This kind of situation can be avoided easily by not using the user input directly in our string.
 
 
-# Flag
+# <span style="text-decoration: underline">Flag</span>
 
 ```text
 b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2

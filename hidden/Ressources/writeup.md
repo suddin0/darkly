@@ -1,12 +1,12 @@
-# Hidden
+# <span style="text-decoration: underline">Hidden</span>
 
 - Tags : `brutforce`, `hidden directory`, `robots.txt`
 - Server ip : `192.168.0.23 `
 - Difficulty : <span style="color : orange">Medium</span>
+
 ___
 
-
-# problem
+# <span style="text-decoration: underline">problem</span>
 
 One of the first place to look for when we are searching for hidden stuffs in a **web application** is [`robots.txt`](https://en.wikipedia.org/wiki/Robots_exclusion_standard). This is a special file that is used to tell [`scrapping`](https://en.wikipedia.org/wiki/Web_scraping) softwares or **search engines** where to go and where not to go in the web site.
 
@@ -18,24 +18,24 @@ Disallow: /whatever
 Disallow: /.hidden
 ```
 
-It says that all user agent (any browsers or software) should not go to the following directories
+It says that all user agent (any browsers or software) should not go to the following directories.
 
 - `/whatever` (http://192.168.0.23/whatever)
 - `/.hidden`  (http://192.168.0.23/.hidden)
 
-?> For this writeup what interest us is `/.hidden`.
+> For this writeup we will only be intereseted in `/.hidden` directory.
 
-when we visit the path **http://192.168.0.23/.hidden** we can see the following content
+When we visit the path **http://192.168.0.23/.hidden** we can see the following content
 
-![.hidden index page](resources/images/hodden_index_page.png)
+> ![.hidden index page](/.resources/images/hodden_index_page.png)
 
 When we enter one of the directories from the list we get a similar directory. For exemple for `amcbevgondgcrloowluziypjdh/` we get the following
 
-![hidden/amcbevgondgcrloowluziypjdh/](resources/images/hidden_amcbevgondgcrloowluziypjdh.png)
+> ![hidden/amcbevgondgcrloowluziypjdh/](/.resources/images/hidden_amcbevgondgcrloowluziypjdh.png)
 
 When we try to enter one of the directories from this list, such as `/.hidden/amcbevgondgcrloowluziypjdh/ccevyakvydrjhsvbnwvestcfeb/`, we get the following
 
-![/.hidden/amcbevgondgcrloowluziypjdh/ccevyakvydrjhsvbnwvestcfeb/](resources/images/hidden_amcbevgondgcrloowluziypjdh_ccevyakvydrjhsvbnwvestcfeb.png)
+> ![/.hidden/amcbevgondgcrloowluziypjdh/ccevyakvydrjhsvbnwvestcfeb/](/.resources/images/hidden_amcbevgondgcrloowluziypjdh_ccevyakvydrjhsvbnwvestcfeb.png)
 
 and when we go inside any of the directories from the this list of directories we get a `README` file. That means there are 3 level of directories and at each level there are in each level there is a `README` file. At each level there are **26** directories and 1 `README` file.
 
@@ -51,9 +51,10 @@ After opening a certain number of `README` files we get the folling sentences in
 
 And they are not the flag... What we can guess is that we the flag is probably in one of the `README` files but we have to find it by opening 1 by one.
 
-# Solution
+# <span style="text-decoration: underline">Solution</span>
 
 ## Using [`wget`](https://www.gnu.org/software/wget/)
+
 So what we need to do to get the flag is search all the `README` files, but doing it manually will take AGES! That means there is no way we are doing that. A easy way would be to automate the process of searching using programs.
 
 What we can do is try to download the directories using `wget` and then make our computer search for them.
@@ -94,7 +95,7 @@ and this gives us all the `README` files with the whole path. Once we have all t
 xargs grep -v ' '
 ```
 
-!> [xags](https://www.man7.org/linux/man-pages/man1/xargs.1.html) is used to get all the standard input and use them as the parameter of the next program
+> > [xags](https://www.man7.org/linux/man-pages/man1/xargs.1.html) is used to get all the standard input and use them as the parameter of the next program
 
 The full command to find all the `README` files and pass them to grep looks as following
 
@@ -120,6 +121,7 @@ and when we execute that command we get the following result
 We can easily create a script that can scrap the `.hidden` webpage, read the contents and search each sub directory recursivly then read the `README` files.
 
 The following program uses the following `node modules`
+
 - [node-html-parser](https://github.com/taoqf/node-html-parser)
 - [node-fetch](https://github.com/node-fetch/node-fetch)
 
@@ -278,16 +280,19 @@ main();
 
 ```
 
-# How to avoid the problem
-A normal server generelly serves everything unles it is told not to serve. The are special files that exists restrict access to special files and directory and that is called [`.htaccess`](https://en.wikipedia.org/wiki/.htaccess) all though in modern servers we do not necesserily use this files bit in servers like `Apachy` and many other we do and their role is to protect access to special places and we should use them pro prodect better our directories.
+# <span style="text-decoration: underline">How to avoid the problem</span>
 
+A normal server generelly serves everything unless it is told not to serve. There is a special file that exists to restrict access to files and directory and that is called [`.htaccess`](https://en.wikipedia.org/wiki/.htaccess) all though in modern servers we do not necesserily use this files bit in servers like `Apachy` and many other we do and their role is to protect access to special places and we should use them pro prodect better our directories.
 
-# Flag
+> The `.htaccess` works on servers that support the it andit's function
+
+# <span style="text-decoration: underline">Flag</span>
 
 ```text
 99dde1d35d1fdd283924d84e6d9f1d820
 ```
 
-# Resources
+# <span style="text-decoration: underline">Resources</span>
+
 - [StackOverflow : Download directories using `wget`](https://stackoverflow.com/a/26269730/4440716)
 - [WGet and Downloading an entire remote directory](https://www.linux.com/training-tutorials/wget-and-downloading-entire-remote-directory/)
