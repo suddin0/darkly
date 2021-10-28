@@ -18,24 +18,24 @@ Disallow: /whatever
 Disallow: /.hidden
 ```
 
-It says that all user agent (any browsers or software) should not go to the following directories
+It says that all user agent (any browsers or software) should not go to the following directories.
 
 - `/whatever` (http://192.168.0.23/whatever)
 - `/.hidden`  (http://192.168.0.23/.hidden)
 
-?> For this writeup what interest us is `/.hidden`.
+?> For this writeup we will only be intereseted in `/.hidden` directory.
 
-when we visit the path **http://192.168.0.23/.hidden** we can see the following content
+When we visit the path **http://192.168.0.23/.hidden** we can see the following content
 
-![.hidden index page](resources/images/hodden_index_page.png)
+![.hidden index page](/.resources/images/hodden_index_page.png)
 
 When we enter one of the directories from the list we get a similar directory. For exemple for `amcbevgondgcrloowluziypjdh/` we get the following
 
-![hidden/amcbevgondgcrloowluziypjdh/](resources/images/hidden_amcbevgondgcrloowluziypjdh.png)
+![hidden/amcbevgondgcrloowluziypjdh/](/.resources/images/hidden_amcbevgondgcrloowluziypjdh.png)
 
 When we try to enter one of the directories from this list, such as `/.hidden/amcbevgondgcrloowluziypjdh/ccevyakvydrjhsvbnwvestcfeb/`, we get the following
 
-![/.hidden/amcbevgondgcrloowluziypjdh/ccevyakvydrjhsvbnwvestcfeb/](resources/images/hidden_amcbevgondgcrloowluziypjdh_ccevyakvydrjhsvbnwvestcfeb.png)
+![/.hidden/amcbevgondgcrloowluziypjdh/ccevyakvydrjhsvbnwvestcfeb/](/.resources/images/hidden_amcbevgondgcrloowluziypjdh_ccevyakvydrjhsvbnwvestcfeb.png)
 
 and when we go inside any of the directories from the this list of directories we get a `README` file. That means there are 3 level of directories and at each level there are in each level there is a `README` file. At each level there are **26** directories and 1 `README` file.
 
@@ -54,6 +54,7 @@ And they are not the flag... What we can guess is that we the flag is probably i
 # Solution
 
 ## Using [`wget`](https://www.gnu.org/software/wget/)
+
 So what we need to do to get the flag is search all the `README` files, but doing it manually will take AGES! That means there is no way we are doing that. A easy way would be to automate the process of searching using programs.
 
 What we can do is try to download the directories using `wget` and then make our computer search for them.
@@ -120,6 +121,7 @@ and when we execute that command we get the following result
 We can easily create a script that can scrap the `.hidden` webpage, read the contents and search each sub directory recursivly then read the `README` files.
 
 The following program uses the following `node modules`
+
 - [node-html-parser](https://github.com/taoqf/node-html-parser)
 - [node-fetch](https://github.com/node-fetch/node-fetch)
 
@@ -279,6 +281,7 @@ main();
 ```
 
 # How to avoid the problem
+
 A normal server generelly serves everything unles it is told not to serve. The are special files that exists restrict access to special files and directory and that is called [`.htaccess`](https://en.wikipedia.org/wiki/.htaccess) all though in modern servers we do not necesserily use this files bit in servers like `Apachy` and many other we do and their role is to protect access to special places and we should use them pro prodect better our directories.
 
 

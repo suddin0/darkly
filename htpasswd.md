@@ -27,7 +27,7 @@ It says that all user agent (any browsers or software) should not go to the foll
 
 when we visit the path **http://192.168.0.23/whatever/** we can see the following content
 
-![whatever index page](resources/images/whatever_index.png)
+![whatever index page](/.resources/images/whatever_index.png)
 
 There is a file called `htpasswd`.
 
@@ -36,6 +36,7 @@ We know from the [apache](https://httpd.apache.org/docs/2.4/programs/htpasswd.ht
 >htpasswd is used to create and update the flat-files used to store usernames and password for basic authentication of HTTP users.
 
 when we open the file we get the following data
+
 ```text
 root:8621ffdbc5698829397d97767ac13db3
 ```
@@ -43,6 +44,7 @@ root:8621ffdbc5698829397d97767ac13db3
 It looks like an user credential. In the homepage (http://192.168.0.23) we get the option to `SIGN IN`. when we try `root` as **Username** and `8621ffdbc5698829397d97767ac13db3` as **Password**, it says **Sorry wrong answer**. So we can not use them to log in.
 
 # Solution
+
 The data is separated using a `:`, the first part of the data is `root` and the second part is `8621ffdbc5698829397d97767ac13db3`. The second part look a lot like an md5 hash. We can also use [this](https://hashes.com/en/tools/hash_identifier) kind of online took to findout the type of the `hash`. We can easily decrypt this hash suing online tools such as [md5decrypt.net](https://md5decrypt.net/en/) or [www.md5online.org](https://www.md5online.org/md5-decrypt.html). And when we decrypt it we know the hash is of the word **`dragon`**. We can also verify it using the `cli` tool `md5sum on **Linux** or `md5` on MacOs (have no idea for windows)
 
 ```bash
@@ -54,12 +56,13 @@ Now if we use the following as user credentials on our Sing In page
 Username : `root`
 Password : `dragon`
 
-... It still doesn't works ...
-hmm..
-sh#t ?
+... It still doesn't works ...<br/>
+hmm..<br/>
+sh#t ?<br/>
 
 Well by seeing the `username` we can guess this is an administrator account, so this is possible that we can not log in from a normal user portal.
 In this kind of old application it is not uncommot to find the following directories
+
 - /admin
 - /image or /images
 - /css
@@ -90,7 +93,8 @@ Nmap done: 1 IP address (1 host up) scanned in 1.44 seconds
 ```
 
 And this clearly shows that there is a directory called `/admin/`. When we try tto access the http://192.168.0.23/admin/ page, there is also a login form.
-![admin login area](resources/images/admin_login_area.png)
+
+![admin login area](/.resources/images/admin_login_area.png)
 
 When we try our `root` user credential here, we get the following flag!
 
@@ -98,10 +102,11 @@ When we try our `root` user credential here, we get the following flag!
 The flag is : d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff
 ```
 
-![whatever root loggedin](resources/images/whatever_root_loggedin.png)
+![whatever root loggedin](/.resources/images/whatever_root_loggedin.png)
 
 
 # How to avoid the problem
+
 This file should be a hidden file and it's acess should be restricted using `.htaccess` or even better not have them in the first place!
 
 # Flag

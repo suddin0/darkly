@@ -10,4 +10,4 @@
 - And much more!
 
 [GitHub](https://github.com/suddin0/darkly)
-[Get Started](#darkly)
+[Get Started](/darkly)
