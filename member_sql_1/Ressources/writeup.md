@@ -34,7 +34,7 @@ First name: Flag
 Surname : GetThe
 ```
 
-?> The minimum number we can use is **1** and the maximum number of value we can try is **5**
+> The minimum number we can use is **1** and the maximum number of value we can try is **5**
 
 It seems like the value we put in the `input` is ised as the `id` for the search (naturally...). The id is meant to be a `number`. it becomes more clear when we try a different text then a `number`, such as the letter `a`, we get the following result.
 
@@ -191,9 +191,9 @@ And this also gives us a long list of `table` name and their `columns`. Here are
 |4| **list_images** | `id`, `url`, `title`, `comment` |
 |5| **vote_dbs** | `id_vote`, `nb_vote`, `subject`|
 
-?> If you are wondaring how do we know that **this** are the `tables` that interests us, then know that all the other tables ware in all uppercase with generic names that we can always find in **default** configurations. Ofcores this does not mean an importent database can not have those kind of charactaristics.
+> If you are wondaring how do we know that **this** are the `tables` that interests us, then know that all the other tables ware in all uppercase with generic names that we can always find in **default** configurations. Ofcores this does not mean an importent database can not have those kind of charactaristics.
 
-?> Remember that to acess tables from different database instead of using *only* the name of the table we have to precise teh database and then the name of the table in the following way `database.table_name`. So if we want to access to the table `list_images` from the database `Member_images` we have to use the following syntax `Member_images.list_images`
+> Remember that to acess tables from different database instead of using *only* the name of the table we have to precise teh database and then the name of the table in the following way `database.table_name`. So if we want to access to the table `list_images` from the database `Member_images` we have to use the following syntax `Member_images.list_images`
 
 ## Get all the informations from the table
 
@@ -238,12 +238,12 @@ It says
 > ```
 > Or you can get it using online tools such as [this](https://md5decrypt.net/Sha256/) (or many others)
 
-?> We can easily "decrypt" (unhash) the value using online tools such as [md5online.org](https://www.md5online.org/md5-decrypt.html) or many others
+> We can easily "decrypt" (unhash) the value using online tools such as [md5online.org](https://www.md5online.org/md5-decrypt.html) or many others
 
 
 There you go, we have found the flag.
 
-!> We can use information from this challanage to do the other challenges
+> We can use information from this challanage to do the other challenges
 
 # How to avoid the problem
 

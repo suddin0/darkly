@@ -23,13 +23,9 @@ It says that all user agent (any browsers or software) should not go to the foll
 - `/whatever` (http://192.168.0.23/whatever/)
 - `/.hidden`  (http://192.168.0.23/.hidden)
 
-?> For this writeup what interest us is `/whatever`.
+> For this writeup what interest us is `/whatever`.
 
-when we visit the path **http://192.168.0.23/whatever/** we can see the following content
-
-![whatever index page](/.resources/images/whatever_index.png)
-
-There is a file called `htpasswd`.
+when we visit the path **http://192.168.0.23/whatever/** we can see that there is a file called `htpasswd`.
 
 We know from the [apache](https://httpd.apache.org/docs/2.4/programs/htpasswd.html) web page that `.htpasswd` is
 
@@ -89,16 +85,11 @@ MAC Address: 08:00:27:CD:44:94 (Oracle VirtualBox virtual NIC)
 Nmap done: 1 IP address (1 host up) scanned in 1.44 seconds
 ```
 
-And this clearly shows that there is a directory called `/admin/`. When we try tto access the http://192.168.0.23/admin/ page, there is also a login form.
-![admin login area](/.resources/images/admin_login_area.png)
-
-When we try our `root` user credential here, we get the following flag!
+And this clearly shows that there is a directory called `/admin/`. When we try tto access the http://192.168.0.23/admin/ page, there is also a login form. When we try our `root` user credential here, we get the following flag!
 
 ```text
 The flag is : d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff
 ```
-
-![whatever root loggedin](/.resources/images/whatever_root_loggedin.png)
 
 
 # How to avoid the problem

@@ -6,10 +6,7 @@
 ___
 
 ## <span style="text-decoration: underline">problem</span>
-When we go to the `SURVEY` tab we see the following content
-![survey index](/.resources/images/survey_index.png)
-
-Here we can see a table where user can select a number between 1-10 by clicking the value on a `pick list` in the **Grade** column. When we select a value from the `pick list` the page get refreshed and nothing happens. When we see the source code of the table we can see the following
+When we go to the `SURVEY` tab, we can see a table where user can select a number between 1-10 by clicking the value on a `pick list` in the **Grade** column. When we select a value from the `pick list` the page get refreshed and nothing happens. When we see the source code of the table we can see the following
 
 ```html
 <table width="50%" style="margin-left: auto; margin-right: auto;">
@@ -159,21 +156,15 @@ Zaz			</td>
 ```
 Here we can see two interesting things:
 
-01. Each **Grade**  input is inside a form that does a `POST` request to the current page
-02. When we select a value a `java script` function execute the `submit` function thus a submot request is sent.
+1.  Each **Grade**  input is inside a form that does a `POST` request to the current page
+2.  When we select a value a `java script` function execute the `submit` function thus a submot request is sent.
 
-!> The `hidden` input is not really importent for us.
+> The `hidden` input is not really importent for us.
 
 ## <span style="text-decoration: underline">Solution</span>
 
 ### Changing the value of the input field
-Just like for the [recover](/recover?id=changing-the-value-of-the-input-field) challenge we can change the `html` `value` of one onf the `pick list` element (the list from 1-10) and select that value as our **Grade**
-
-![survey modified value](/.resources/images/survey_index_modified_value.png)
-
-And we get the following result
-
-![survey flag](/.resources/images/survey_flag.png)
+Just like for the [recover](/recover?id=changing-the-value-of-the-input-field) challenge we can change the `html` `value` of one onf the `pick list` element (the list from 1-10) and select that value as our **Grade**.
 
 ### Using [`Curl`](https://curl.se/)
 

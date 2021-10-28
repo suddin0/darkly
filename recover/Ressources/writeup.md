@@ -9,13 +9,7 @@ ___
 ## <span style="text-decoration: underline">problem</span>
 In the sign in page when we get the option **`I forgot my password`** Which bring us to the following page (http://192.168.1.23/?page=recover)
 
-![recover password index page](/.resources/images/recover_password_page_index.png)
-
-And when we click the `SUBMIT` button we get the following result
-
-![recover page submited](/.resources/images/recover_password_page_submit.png)
-
-It seems like noting happend...
+And when we click the `SUBMIT` button, It seems like noting happend...
 When we see the source code of the `recover` page we see the following `html` block near the `SUBMIT` button (inside the `form`).
 
 ```html
@@ -25,17 +19,13 @@ When we see the source code of the `recover` page we see the following `html` bl
 </form>
 ```
 
-We can see that there is an `input` that is `hidden`, that contains the value `webmaster@borntosec.com`. When we change the `type` from **hidden** to **visible** we get the following result
-
-![recover page visible input field](/.resources/images/recover_password_page_visible_field.png)
-
+We can see that there is an `input` that is `hidden`, that contains the value `webmaster@borntosec.com`. When we change the `type` from **hidden** to **visible** we get an `input` field with the value `webmaster@borntosec.com`
 
 ## <span style="text-decoration: underline">Solution</span>
 
 ### Changing the value of the input field
-One easiy way to solve this problem is just making the `input` field `visible` and changing it's value from  `webmaster@borntosec.com` to anything else (even no value at all) and clicking the submit button. it then brings us the following page
 
-![recover page flag](/.resources/images/recover_password_page_flag.png)
+One easy way to solve this problem is just making the `input` field `visible` and changing it's value from  `webmaster@borntosec.com` to anything else (even no value at all) and clicking the submit button.
 
 ### Using [`Curl`](https://curl.se/)
 
@@ -47,6 +37,7 @@ $ curl -s -d 'mail=&Submit=Submit' -X POST http://192.168.1.23/\?page\=recover  
 ```
 
 # How to avoid the problem
+
 We could avoid this kind of problem easily by not putting any hidden element in our source code as it can be modified easily. Instead what we could do is check some specific elements in the backend to determin who sent the request or even set an unique ID
 
 # Flag

@@ -33,7 +33,7 @@ During the [member](/member.md) challenge we have found out what `table` contain
 
 Let's try to get the contents of this table
 
-!> Remember that if we try to access a table that is not present in the default database but in some other database then we have to use the following syntax `database.table`
+> Remember that if we try to access a table that is not present in the default database but in some other database then we have to use the following syntax `database.table`
 
 
 ```sql

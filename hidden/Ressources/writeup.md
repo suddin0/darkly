@@ -23,7 +23,7 @@ It says that all user agent (any browsers or software) should not go to the foll
 - `/whatever` (http://192.168.0.23/whatever)
 - `/.hidden`  (http://192.168.0.23/.hidden)
 
-?> For this writeup what interest us is `/.hidden`.
+> For this writeup what interest us is `/.hidden`.
 
 when we visit the path **http://192.168.0.23/.hidden** we can see the following content
 
@@ -94,7 +94,7 @@ and this gives us all the `README` files with the whole path. Once we have all t
 xargs grep -v ' '
 ```
 
-!> [xags](https://www.man7.org/linux/man-pages/man1/xargs.1.html) is used to get all the standard input and use them as the parameter of the next program
+> [xags](https://www.man7.org/linux/man-pages/man1/xargs.1.html) is used to get all the standard input and use them as the parameter of the next program
 
 The full command to find all the `README` files and pass them to grep looks as following
 

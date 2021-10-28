@@ -6,9 +6,7 @@
 ___
 
 # <span style="text-decoration: underline">problem</span>
-On the bottom of our home page (http://192.168.1.23/) we have 3 **Social media** icons as we can see in this image
-
-![Sociam media icons](/.resources/images/social%20media.png)
+On the bottom of our home page (http://192.168.1.23/) we have 3 **Social media**
 
 Upon clicking the icons we are redirected to
 
@@ -43,12 +41,11 @@ We can simply take the redirection link and change the value of `site` field so 
 http://192.168.1.23/index.php?page=redirect&site=42
 ```
 
-And we get the following result
-
-![redirection flag](/.resources/images/redirection_flag.png)
+And we get the flag!
 
 
 # How to avoid the problem
+
 We should always verify query parameter on the server side and manage errors, because if the server do not verify a hacker could lead a user to a malicious site using our url which itself looks like a harmless ul but the result could be very different.
 
 # Flag

@@ -10,7 +10,6 @@ ___
 
 On the bottom of our website we can see a copyright message that says `© BornToSec`. This is a link to **http://192.168.1.23/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c**, which in itself looks like a *flag*. There is nothing in partucular in this website to see.
 
-![copyright index](/.resources/images/copytight_page_index.png)
 
 In the `source code` there is a big comment and in the biddle of the comment we see the following message
 
@@ -22,6 +21,7 @@ In the `source code` there is a big comment and in the biddle of the comment we 
 ```
 
 From this comment we can guess that
+
 - we need to be coming to this site from (redirected from **ro** [refered](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) from) `https://www.nsa.gov/`
 - Our browser should be `ft_bornToSec`. A program knows what browser a user uses by the header element [`User-Agent`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
 
@@ -37,11 +37,10 @@ In a normal browser we can not control the `Http-header` so that we send custom 
 For this solution i will be using [simple-modify-headers](https://addons.mozilla.org/fr/firefox/addon/simple-modify-header/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search) on **firefox**
 
 We open the **simple-modify-headers** parameter options and we set what we need to do the challenge
-![simple-modify-headers menu](/.resources/images/copyright_header_extention.png)
 
-Once everything is set we go to our `copyright` url (http://192.168.1.23/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c) and we reload the page so that our newly set `http-header` option takes effect and voila!
 
-![copytight flag](/.resources/images/copyright_page_flag.png)
+Once everything is set we go to our `copyright` url (http://192.168.1.23/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c) and we reload the page so that our newly set `http-header` option takes effect and voila, we get the flag!
+
 
 ## Using [`Curl`](https://curl.se/)
 

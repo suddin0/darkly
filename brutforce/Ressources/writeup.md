@@ -68,7 +68,7 @@ All we have to do now is
 
 Here is a simple `shell` script to do the brutforce
 
-?> We will use `admin` as username first because it is one of the most used username for admin account.
+> We will use `admin` as username first because it is one of the most used username for admin account.
 
 
 ```bash
@@ -115,7 +115,7 @@ do
 done
 ```
 
-!> If you try the script, do not forget to put the **right** `host` / `ip` address for `you`!
+> If you try the script, do not forget to put the **right** `host` / `ip` address for `you`!
 
 After executing our script, the script tells us that the password is `shadow`. so :
 
