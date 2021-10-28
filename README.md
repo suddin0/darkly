@@ -3,6 +3,8 @@
 ----
 ![darkly header](/.resources/images/42/main_header.png)
 
+### Visit the [**Github Page**](suddin0.github.io/darkly/) for a better visual document
+
 ## Introduction
 
 Darkly is one of the [42](https://42.fr/en/homepage/)'s project related to `Web applications` security and pentesting, where you learn to exploit a **web application**. The project is similar to [OWASP-VWAD](https://owasp.org/www-project-vulnerable-web-applications-directory/).
