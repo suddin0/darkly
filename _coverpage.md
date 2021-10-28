@@ -1,5 +1,5 @@
 
-![logo](/resources/images/42/logo_128x128.png)
+![logo](/.resources/images/42/logo_128x128.png)
 
 # Darkly
 
@@ -10,4 +10,4 @@
 - And much more!
 
 [GitHub](https://github.com/suddin0/darkly)
-[Get Started](/darkly)
+[Get Started](/README)

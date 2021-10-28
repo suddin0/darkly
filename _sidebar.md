@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-* [Darkly](/darkly.md 'Darkly')
+* [Darkly](/README.md 'Darkly')
 ---
 <h1 style="text-align: center; green; margin: 0 auto; font-weight: lighter;">Challenges</h1>
 
@@ -19,7 +19,6 @@
 * [Member **SQLi** 1](member.md)
 * [Search Image **SQLi** 2](search_image.md)
 * [DB_DEFAULT **SQLi** 3](db_default.md)
-
 
 ---
 
