@@ -7,7 +7,7 @@ ___
 
 # <span style="text-decoration: underline">problem</span>
 On the bottom of our home page (http://192.168.1.23/) we have 3 **Social media** icons as we can see in this image
-![Sociam media icons](resources/images/social%20media.png)
+![Sociam media icons](/.resources/images/social%20media.png)
 
 Upon clicking the icons we are redirected to
 
@@ -43,7 +43,7 @@ http://192.168.1.23/index.php?page=redirect&site=42
 ```
 
 And we get the following result
-![redirection flag](resources/images/redirection_flag.png)
+![redirection flag](/.resources/images/redirection_flag.png)
 
 
 # How to avoid the problem

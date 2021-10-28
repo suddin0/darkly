@@ -7,7 +7,7 @@ ___
 
 ## <span style="text-decoration: underline">problem</span>
 When we go to the `SURVEY` tab we see the following content
-![survey index](resources/images/survey_index.png)
+![survey index](/.resources/images/survey_index.png)
 
 Here we can see a table where user can select a number between 1-10 by clicking the value on a `pick list` in the **Grade** column. When we select a value from the `pick list` the page get refreshed and nothing happens. When we see the source code of the table we can see the following
 
@@ -168,10 +168,10 @@ Here we can see two interesting things:
 
 ### Changing the value of the input field
 Just like for the [recover](/recover?id=changing-the-value-of-the-input-field) challenge we can change the `html` `value` of one onf the `pick list` element (the list from 1-10) and select that value as our **Grade**
-![survey modified value](resources/images/survey_index_modified_value.png)
+![survey modified value](/.resources/images/survey_index_modified_value.png)
 
 And we get the following result
-![survey flag](resources/images/survey_flag.png)
+![survey flag](/.resources/images/survey_flag.png)
 
 ### Using [`Curl`](https://curl.se/)
 

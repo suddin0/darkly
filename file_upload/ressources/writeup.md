@@ -47,7 +47,7 @@ MAC Address: 08:00:27:CD:44:94 (Oracle VirtualBox virtual NIC)
 i> We can also access this page using the `ADD IMAGE` button from the **home page**
 
 When we visit the **upload** page (http://192.168.1.23:80/?page=upload) we see the following
-![upload page](resources/images/upload_index.png)
+![upload page](/.resources/images/upload_index.png)
 
 We can see there is a `brows` button and there is a `UPLOAD` button. On top of all the button it says **Choose an image to upload**. From this we can guess that we have to upload an **image** file.
 
