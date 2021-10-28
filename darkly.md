@@ -1,5 +1,7 @@
 # Darkly
-
+##### 42 Web Application related Security project
+----
+![darkly header](/resources/images/42/main_header.png)
 
 ## Introduction
 Darkly is one of the [42](https://42.fr/en/homepage/)'s security project related to `Web applications`, where you learn to exploit a **web application**. The project is similar to [OWASP-VWAD](https://owasp.org/www-project-vulnerable-web-applications-directory/).

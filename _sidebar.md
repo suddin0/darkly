@@ -1,6 +1,9 @@
 <!-- docs/_sidebar.md -->
 
 * [Darkly](/ 'Darkly')
+---
+<h1 style="text-align: center; green; margin: 0 auto; font-weight: lighter;">Challenges</h1>
+
 * [Hidden](hidden.md 'Hidden')
 * [Admin (Htpasswd)](htpasswd.md)
 * [Cookies](cookies.md)
@@ -10,13 +13,16 @@
 * [File Upload](file_upload.md)
 * [Copyright](copyright.md "© BornToSec")
 * [Directory Browsing](directory_browsing.md)
-* [Feedback XSS](feedback.md)
-* [NSA Image XSS](nsa_image_xss.md)
+* [Feedback **XSS** 1](feedback.md)
+* [NSA Image **XSS** 2](nsa_image_xss.md)
 * [Brutforce](brutforce.md)
-* [Member SQLi 1](member.md)
-<!-- ___ -->
-<!-- * [SQL Injection](sql_injection.md) -->
-<!-- * [XSS](cookies.md) -->
-<!-- * [Redirection](cookies.md) -->
-<!-- * [Brutforce](cookies.md) -->
-<!-- * [Robot.txt](cookies.md) -->
+* [Member **SQLi** 1](member.md)
+* [Search Image **SQLi** 2](search_image.md)
+* [DB_DEFAULT **SQLi** 3](db_default.md)
+
+
+---
+
+<h1 style="text-align: center; green; margin: 0 auto; font-weight: lighter;">Extras</h1>
+
+* [All the flags](extra_all_flags.md.md)

@@ -1,6 +1,6 @@
 # <span style="text-decoration: underline"> Member </span>
 
-##### Tags : `sql injection` 
+##### Tags : `sql injection` , `md5` , `sha256`
 ##### Server ip : `192.168.1.17`
 ____
 
@@ -144,7 +144,7 @@ Here is the `schema` and table names that is of interest to us
 |4|Member_images|list_images|
 |5|Member_survey|vote_dbs|
 
-## Get more information from a table
+## Get more information from the tables and databases
 
 Let's try to grab one of this tables and see if we can see how many columns there are like we did with the current database (`1 AND 1=0 UNION SELECT null, null --`)
 
@@ -158,13 +158,16 @@ And we get the following result
 Table 'Member_Sql_Injection.guestbook' doesn't exist
 ```
 
-Great... it seems like we are limited to the `Member_Sql_Injection` schema... There is only one `table` under `Member_Sql_Injection` that we can see on our list of `tables` and that is **users**
+It seems like our current (default) database is `Member_Sql_Injection`. There is only one `table` under `Member_Sql_Injection` that we can see on our list of `tables` and that is **users**
 
-An other way to know which `database` we can exploit would be using the folloiwng `query`
+An other way to know which `database` we are currently using is using the following `query`
 
 ```sql
 1 AND 1=0 UNION SELECT 1, (SELECT group_concat(table_name) FROM information_schema.tables WHERE table_schema=database()) --
 ```
+
+> The [`DATABASE()`](https://www.w3schools.com/SQL/func_mysql_database.asp) function returns the name of the current database. If there is no current database, this function returns NULL or "".
+
 
 > The group_concat() function concatenates results into a string. The Information_schema is a database that stores information about other databases. The database() function returns the name of the current database.
 
@@ -189,7 +192,7 @@ And this also gives us a long list of `table` name and their `columns`. Here are
 
 ?> If you are wondaring how do we know that **this** are the `tables` that interests us, then know that all the other tables ware in all uppercase with generic names that we can always find in **default** configurations. Ofcores this does not mean an importent database can not have those kind of charactaristics.
 
-!> Remember that from the page **member** we can only interect with the table `users`
+?> Remember that to acess tables from different database instead of using *only* the name of the table we have to precise teh database and then the name of the table in the following way `database.table_name`. So if we want to access to the table `list_images` from the database `Member_images` we have to use the following syntax `Member_images.list_images`
 
 ## Get all the informations from the table
 

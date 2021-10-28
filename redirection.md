@@ -1,10 +1,10 @@
-# <span style="text-decoration: underline">Recover</span>
+# <span style="text-decoration: underline">Redirection</span>
 
-##### Tags : `url`, ``, ``
+##### Tags : `url`, `redirection`, `query`
 ##### Server ip : `192.168.1.23 `
 ____
 
-## <span style="text-decoration: underline">problem</span>
+# <span style="text-decoration: underline">problem</span>
 On the bottom of our home page (http://192.168.1.23/) we have 3 **Social media** icons as we can see in this image
 ![Sociam media icons](resources/images/social%20media.png)
 
@@ -33,10 +33,9 @@ Here we can see that wr are not redirected directly to the social media page, **
 
 That means we first ask the server if it can redirect us to the proper link of the social media we are trying to access.
 
-## <span style="text-decoration: underline">Solution</span>
+# <span style="text-decoration: underline">Solution</span>
 
-### Change the link
-We can simply take the redirection link and change the calue of `site` field so that we can control where we are going. So an exemple would be the following
+We can simply take the redirection link and change the value of `site` field so that we can control where we are going. So an exemple would be the following
 
 ```text
 http://192.168.1.23/index.php?page=redirect&site=42

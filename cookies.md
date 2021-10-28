@@ -1,4 +1,4 @@
-# htpassword
+# Cookies
 
 ##### Tags : `hash`, `md5`, `cookies`, `storage`
 ##### Server ip : `192.168.1.23 `

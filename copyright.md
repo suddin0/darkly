@@ -1,6 +1,6 @@
 # <span style="text-decoration: underline"> ©opyright </span>
 
-##### Tags : `Comments` , `Http-Header` , `Referer` , `User-Agent`
+##### Tags : `Comments` , `Http-Header` , `Referer` , `User-Agent` , `curl`
 ##### Server ip : `192.168.1.23 `
 ____
 
@@ -38,7 +38,7 @@ We open the **simple-modify-headers** parameter options and we set what we need 
 Once everything is set we go to our `copyright` url (http://192.168.1.23/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c) and we reload the page so that our newly set `http-header` option takes effect and voila!
 ![copytight flag](resources/images/copyright_page_flag.png)
 
-## Using [`Curl`]()
+## Using [`Curl`](https://curl.se/)
 
 Contrary to using the browser, with curl it is way easier to do this kind of things, because it is built to do things as such.
 
@@ -63,5 +63,3 @@ We can avoid this kind of problemes by not depending on the `Http-header` elemen
 ```text
 f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
 ```
-
-# Resources
