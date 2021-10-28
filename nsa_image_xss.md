@@ -78,7 +78,6 @@ Yes it gives us the flag...
 
 To avoid this problem the developper should not use user input as `object` tag's `data` in the firt place and use a predefined value.
 
-
 # <span style="text-decoration: underline">Flag</span>
 
 ```text

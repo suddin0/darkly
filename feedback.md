@@ -6,7 +6,6 @@
 
 ___
 
-
 # <span style="text-decoration: underline">problem</span>
 
 From the homepage when we click on the button `FEEDBACK` we are brought to http://192.168.1.23/?page=feedback. In this page we are presented with a `form` with **2** `inputs`
@@ -39,7 +38,6 @@ When we submit `<script` we get the **`flag`** as the result.
 # <span style="text-decoration: underline">How to avoid the problem</span>
 
 To prevent this problem we should **never** show directly user inputs. Any user inputs should be shown in tags like `<code>` and `<pre>` and if possible treat them befor showing.
-
 
 # <span style="text-decoration: underline">Flag</span>
 

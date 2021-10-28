@@ -6,7 +6,6 @@
 
 ___
 
-
 # <span style="text-decoration: underline">problem</span>
 
 On the bottom of our website we can see a copyright message that says `© BornToSec`. This is a link to **http://192.168.1.23/index.php?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c**, which in itself looks like a *flag*. There is nothing in partucular in this website to see.

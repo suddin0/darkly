@@ -105,7 +105,6 @@ The flag is : d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff
 
 > ![whatever root loggedin](/.resources/images/whatever_root_loggedin.png)
 
-
 # <span style="text-decoration: underline">How to avoid the problem</span>
 
 This file should be a hidden file and it's acess should be restricted using `.htaccess` or even better not have them in the first place!

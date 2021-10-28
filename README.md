@@ -36,7 +36,6 @@ And there are also a bonus part which will be take to account **only** if the ma
 |Understanding of brutforce|
 |Understanding of robot.txt|
 
-
 ## Resources
 
 - Project [link](https://projects.intra.42.fr/projects/42cursus-darkly) for 42's students
@@ -93,4 +92,4 @@ according to the 42 subject all you need to do is
 
 ### An exemple of the front page
 
-![home page exemple](/.resources/images/hope_page_exemple.png)
+> ![home page exemple](/.resources/images/hope_page_exemple.png)

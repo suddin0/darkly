@@ -40,6 +40,7 @@ One easiy way to solve this problem is just making the `input` field `visible` a
 ### Using [`Curl`](https://curl.se/)
 
 Ofcorse the same request could be sent using `Curl` from our terminal and it would look like this
+
 ```bash
 $ curl -s -d 'mail=&Submit=Submit' -X POST http://192.168.1.23/\?page\=recover  | grep flag
 
