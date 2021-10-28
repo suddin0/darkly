@@ -3,7 +3,7 @@
 ----
 ![darkly header](/.resources/images/42/main_header.png)
 
-### Visit the [**Github Page**](suddin0.github.io/darkly/) for a better visual document
+### Visit the [**Github Page**](https://suddin0.github.io/darkly/#/) for a better visual document
 
 ## Introduction
 
