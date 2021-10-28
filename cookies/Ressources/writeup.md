@@ -11,6 +11,7 @@ ___
 For a long time webadministrator used [`browser cookies`](https://en.wikipedia.org/wiki/HTTP_cookie) to store many different information and states, including the login information and state. A cookie is generally created by the `server` and is stored in the users (clients) `browser` and during each `http` request the cookies are sent inside the [`http header`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers). Cookies are helpfull in many ways but if badly managed then they could become vulerable.
 
 When we open our developper tool in `firefox` web browser on our domain `http://192.168.1.23/?page=signin` we see the following
+
 ![signin page cookies](/.resources/images/cookies_signin_page.png)
 
 We can see the
@@ -51,6 +52,7 @@ Good job! Flag : df2eb4ba34ed059a1e3e89ff4dfc13445f104a1a52295214def1c4fb1693a5c
 
 
 # How to avoid the problem
+
 There are many ways do solve this problem. In modern days we do not use this kind of ways to authenticate people and it is reasonable to do such.
 
 # Flag

@@ -168,9 +168,11 @@ Here we can see two interesting things:
 
 ### Changing the value of the input field
 Just like for the [recover](/recover?id=changing-the-value-of-the-input-field) challenge we can change the `html` `value` of one onf the `pick list` element (the list from 1-10) and select that value as our **Grade**
+
 ![survey modified value](/.resources/images/survey_index_modified_value.png)
 
 And we get the following result
+
 ![survey flag](/.resources/images/survey_flag.png)
 
 ### Using [`Curl`](https://curl.se/)

@@ -15,6 +15,7 @@ From the middle section of our home page (prism) one of the three images (the la
 It shows us the parent page in some kind of `iframe`. but we still don't get the flag... After a little bit of messing arround we can find out that when we replace the `value` of **`src`** by an image from the same server we can see the image in teh biddle of the page.
 
 here i replaced **`src`** by the `42` logo path  (http://192.168.1.23/?page=media&src=/images/42.jpeg)
+
 ![nsa 42 logo](/.resources/images/nsa_42_logo.png)
 
 When we inspect the image we can see the following `html`

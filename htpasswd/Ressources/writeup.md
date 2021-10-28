@@ -27,7 +27,7 @@ It says that all user agent (any browsers or software) should not go to the foll
 
 when we visit the path **http://192.168.0.23/whatever/** we can see the following content
 
-![whatever index page](resources/images/whatever_index.png)
+![whatever index page](/.resources/images/whatever_index.png)
 
 There is a file called `htpasswd`.
 

