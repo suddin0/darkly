@@ -1,8 +1,10 @@
 # Hidden
 
-##### Tags : `brutforce`, `hidden directory`, `robots.txt`
-##### Server ip : `192.168.0.23 `
-____
+- Tags : `brutforce`, `hidden directory`, `robots.txt`
+- Server ip : `192.168.0.23 `
+- Difficulty : <span style="color : orange">Medium</span>
+___
+
 
 # problem
 

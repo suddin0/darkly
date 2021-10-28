@@ -1,8 +1,10 @@
 # Cookies
 
-##### Tags : `hash`, `md5`, `cookies`, `storage`
-##### Server ip : `192.168.1.23 `
-____
+- Tags : `hash`, `md5`, `cookies`, `storage`
+- Server ip : `192.168.1.23 `
+- Difficulty : <span style="color : green">Easy</span>
+___
+
 
 # problem
 

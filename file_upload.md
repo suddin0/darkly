@@ -1,8 +1,10 @@
 # <span style="text-decoration: underline"> File Upload </span>
 
-##### Tags : `file` , `image` , `upload`
-##### Server ip : `192.168.1.23 `
-____
+- Tags : `file` , `image` , `upload`
+- Server ip : `192.168.1.23 `
+- Difficulty : <span style="color : orange">Medium</span>
+___
+
 
 ## <span style="text-decoration: underline">problem</span>
 

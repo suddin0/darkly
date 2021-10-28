@@ -4,9 +4,42 @@
 ![darkly header](/resources/images/42/main_header.png)
 
 ## Introduction
-Darkly is one of the [42](https://42.fr/en/homepage/)'s security project related to `Web applications`, where you learn to exploit a **web application**. The project is similar to [OWASP-VWAD](https://owasp.org/www-project-vulnerable-web-applications-directory/).
+Darkly is one of the [42](https://42.fr/en/homepage/)'s project related to `Web applications` security and pentesting, where you learn to exploit a **web application**. The project is similar to [OWASP-VWAD](https://owasp.org/www-project-vulnerable-web-applications-directory/).
 
-We are given a Linux (ubuntu x32) [iso](https://mega.nz/file/6f4UEKBZ#iYNQUcUIr3nsCDvsSNm2-Nhpm76L-L4QdRfsGKx0VFA) containing a vulnerable web application and we are suppose to exploit it in different ways and obtain the [`flags`](https://startacybercareer.com/what-is-a-cybersecurity-capture-the-flag/).
+We are given a Linux (ubuntu x32) [iso](https://mega.nz/file/6f4UEKBZ#iYNQUcUIr3nsCDvsSNm2-Nhpm76L-L4QdRfsGKx0VFA) containing a vulnerable web application and we are suppose to exploit it in different ways and obtain the [`flags`](https://startacybercareer.com/what-is-a-cybersecurity-capture-the-flag/). We are asked to at least do **13** challenges (find vulnerabilities) during the correction even though there are more. The followings are the names of the challenges provided during the correction and asked to explain them.
+
+```
+<span style="color : red">Difficult</span>
+<span style="color : orange">Medium</span>
+<span style="color : green">Easy</span>
+```
+
+|Challenges| Dificulty |
+|--|--|
+|SQL injection Advace|<span style="color : red">Difficult</span>|
+|include|<span style="color : orange">Medium</span>|
+|XSS basic| <span style="color : green">Easy</span> |
+|XSS advance| <span style="color : orange">Medium</span> |
+|Cookies|<span style="color : green">Easy</span>|
+|Spoof (Curl)|<span style="color : green">Easy</span>|
+|Admin (htpasswd)|<span style="color : green">Easy</span>|
+|Brutforce (member)|<span style="color : orange">Medium</span>|
+|File upload|<span style="color : orange">Medium</span>|
+|Redirect|<span style="color : green">Easy</span>|
+|Guess (dossier cache)|<span style="color : orange">Medium</span>|
+|Survey|<span style="color : green">Easy</span>|
+|Recover|<span style="color : green">Easy</span>|
+
+And there are also a bonus part which will be take to account only if the mandatory part is done entirely and done "well"
+
+|Bpnus part|
+|--|
+|Understanding of XSS|
+|Understanding of SQL|
+|Understanding of Redirection|
+|Understanding of brutforce|
+|Understanding of robot.txt|
+
 
 ## Resources
 

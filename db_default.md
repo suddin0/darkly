@@ -1,8 +1,10 @@
 # <span style="text-decoration: underline"> DB_DEFAULT </span>
 
-##### Tags : `SQL Injection`
-##### Server ip : `192.168.1.23 `
-____
+- Tags : `SQL Injection`
+- Server ip : `192.168.1.23 `
+- Difficulty : <span style="color : green">Easy</span>
+___
+
 
 # <span style="text-decoration: underline">problem</span>
 

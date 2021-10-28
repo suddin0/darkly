@@ -1,8 +1,9 @@
 # <span style="text-decoration: underline">Redirection</span>
 
-##### Tags : `url`, `redirection`, `query`
-##### Server ip : `192.168.1.23 `
-____
+- Tags : `url`, `redirection`, `query`
+- Server ip : `192.168.1.23 `
+- Difficulty : <span style="color : green">Easy</span>
+___
 
 # <span style="text-decoration: underline">problem</span>
 On the bottom of our home page (http://192.168.1.23/) we have 3 **Social media** icons as we can see in this image

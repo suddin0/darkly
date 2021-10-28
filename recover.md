@@ -1,8 +1,10 @@
 # <span style="text-decoration: underline">Recover</span>
 
-##### Tags : `html`, `source code`, `hidden`
-##### Server ip : `192.168.1.23 `
-____
+- Tags : `html`, `source code`, `hidden`
+- Server ip : `192.168.1.23 `
+- Difficulty : <span style="color : green">Easy</span>
+___
+
 
 ## <span style="text-decoration: underline">problem</span>
 In the sign in page when we get the option **`I forgot my password`** Which bring us to the following page (http://192.168.1.23/?page=recover)

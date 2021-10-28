@@ -1,8 +1,10 @@
 # <span style="text-decoration: underline"> FeedBack XSS</span>
 
-##### Tags : `xss`, `raw data`
-##### Server ip : `192.168.1.23 `
-____
+- Tags : `xss`, `raw data`
+- Server ip : `192.168.1.23 `
+- Difficulty : <span style="color : green">Easy</span>
+___
+
 
 # <span style="text-decoration: underline">problem</span>
 From the homepage when we click on the button `FEEDBACK` we are brought to http://192.168.1.23/?page=feedback. In this page we are presented with a `form` with **2** `inputs`

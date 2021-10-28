@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-* [Darkly](/ 'Darkly')
+* [Darkly](/darkly.md 'Darkly')
 ---
 <h1 style="text-align: center; green; margin: 0 auto; font-weight: lighter;">Challenges</h1>
 

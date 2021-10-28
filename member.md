@@ -1,7 +1,8 @@
 # <span style="text-decoration: underline"> Member </span>
 
-##### Tags : `sql injection` , `md5` , `sha256`
-##### Server ip : `192.168.1.17`
+- Tags : `sql injection` , `md5` , `sha256`
+- Server ip : `192.168.1.17`
+- Difficulty : <span style="color : red">Difficult</span>
 ____
 
 # <span style="text-decoration: underline">problem</span>

@@ -1,8 +1,10 @@
 # <span style="text-decoration: underline"> Directory browsing </span>
 
-##### Tags : `url` , `directory` , `browsing` , `path` , `etc/passwd`
-##### Server ip : `192.168.1.23 `
-____
+- Tags : `url` , `directory` , `browsing` , `path` , `etc/passwd` , `guess`
+- Server ip : `192.168.1.23 `
+- Difficulty : <span style="color : orange">Medium</span>
+___
+
 
 # <span style="text-decoration: underline">problem</span>
 When we go to the `signin` page we go to the **http://192.168.1.23/?page=signin** page. We can see that this url takes a parameter called `page` and the value us `signin`. When we go to the `Survey` page we can see **http://192.168.1.23/?page=survey** and again the parameter `page` and the value this time is `survey`. We can see that the value represent the page that we want to be served.

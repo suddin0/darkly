@@ -1,8 +1,10 @@
 # <span style="text-decoration: underline"> Brutforce </span>
 
-##### Tags : `brutforce` , `curl`, `guess`
-##### Server ip : `192.168.1.17 `
-____
+- Tags : `brutforce` , `curl`, `guess`
+- Server ip : `192.168.1.17 `
+- Difficulty : <span style="color : orange">Medium</span>
+___
+
 
 # <span style="text-decoration: underline">problem</span>
 

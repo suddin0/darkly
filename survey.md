@@ -1,8 +1,9 @@
 # <span style="text-decoration: underline">Survey</span>
 
-##### Tags : `html`, `source code`, `form` , `POST`
-##### Server ip : `192.168.1.23 `
-____
+- Tags : `html`, `source code`, `form` , `POST`
+- Server ip : `192.168.1.23 `
+- Difficulty : <span style="color : green">Easy</span>
+___
 
 ## <span style="text-decoration: underline">problem</span>
 When we go to the `SURVEY` tab we see the following content

@@ -1,8 +1,10 @@
 # <span style="text-decoration: underline"> NSA Image XSS </span>
 
-##### Tags : `xss` , `include`
-##### Server ip : `192.168.1.23 `
-____
+- Tags : `xss` , `include`
+- Server ip : `192.168.1.23 `
+- Difficulty : <span style="color : orange">Medium</span>
+___
+
 
 # <span style="text-decoration: underline">problem</span>
 

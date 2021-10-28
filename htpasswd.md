@@ -1,8 +1,10 @@
 # htpassword
 
-##### Tags : `hash`, `md5`, `admin`, `.htpasswd`
-##### Server ip : `192.168.0.23 `
-____
+- Tags : `hash`, `md5`, `admin`, `.htpasswd`
+- Server ip : `192.168.0.23 `
+- Difficulty : <span style="color : green">Easy</span>
+___
+
 
 # problem
 
